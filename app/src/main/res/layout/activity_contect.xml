@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Contect"
+    android:orientation="vertical"
+    android:background="@drawable/textur_bg">
+
+    <RelativeLayout
+        android:id="@+id/lay"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:padding="5dp"
+            android:id="@+id/img_back"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/back_arrow_white"
+            android:tint="#ffffff" />
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/img_back"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="Contact"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="If you have any Query please call on :"
+        android:layout_marginTop="45dp"
+        android:fontFamily="@font/bariol_bold"
+        android:gravity="center"
+        android:foregroundGravity="center"
+        android:textSize="25dp"/>
+
+    <TextView
+        android:id="@+id/t_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+91 "
+        android:layout_marginTop="19dp"
+        android:fontFamily="@font/bariol_bold"
+        android:gravity="center"
+        android:foregroundGravity="center"
+        android:textSize="25dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:shadowColor="@android:color/holo_red_dark"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="or E-mail us on :"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/bariol_bold"
+        android:gravity="center"
+        android:foregroundGravity="center"
+        android:textSize="25dp"/>
+
+
+    <TextView
+        android:id="@+id/t_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="E-mail"
+        android:layout_marginTop="9dp"
+        android:fontFamily="@font/bariol_bold"
+        android:gravity="center"
+        android:foregroundGravity="center"
+        android:textSize="25dp"
+        android:textColor="@android:color/holo_red_dark"/>
+
+</LinearLayout>
