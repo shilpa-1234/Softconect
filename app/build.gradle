@@ -6,8 +6,8 @@ android {
         applicationId "com.exam.softconect"
         minSdkVersion 19
         targetSdkVersion 30
-        versionCode 15
-        versionName "3.3"
+        versionCode 16
+        versionName "3.4"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 //        android.ndkVersion  "21.3.6528147"
         ndkVersion "21.3.6528147"

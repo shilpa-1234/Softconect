@@ -1,9 +1,9 @@
-package com.exam.softconect.retrofit;
+package com.exam.softconect.Activity;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class downloadpdf {
+public class Downloadpojo {
 
     @SerializedName("status")
     @Expose
