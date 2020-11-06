@@ -28,4 +28,5 @@ public class ServerUtils {
     public final static String rankDetail_url = "rankDetail";
     public final static String review_url = "review/";
     public final static String purchaseAuth_url = "purchaseAuth";
+    public final static String downloadpdf_url = "downloadPdf";
 }

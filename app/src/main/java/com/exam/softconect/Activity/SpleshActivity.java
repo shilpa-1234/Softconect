@@ -58,7 +58,7 @@ public class SpleshActivity extends AppCompatActivity {
         img_logo_txt = findViewById(R.id.img_logo_txt);
 
         //Set Animation
-        img_logo.animate().alpha(1).setDuration(2000).start();
+        img_logo.animate().alpha(1).setDuration(1500).start();
 
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.wobble);
         img_logo_txt.startAnimation(animation);

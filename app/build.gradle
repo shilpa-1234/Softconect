@@ -6,8 +6,8 @@ android {
         applicationId "com.exam.softconect"
         minSdkVersion 19
         targetSdkVersion 30
-        versionCode 16
-        versionName "3.4"
+        versionCode 13
+        versionName "3.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 //        android.ndkVersion  "21.3.6528147"
         ndkVersion "21.3.6528147"
@@ -58,12 +58,15 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.5.2'
     implementation 'de.hdodenhof:circleimageview:3.0.0'
     implementation 'ai.devsupport.instamojo:instamojolib:0.1.6'
-
+    implementation 'com.squareup.retrofit2:retrofit:2.2.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
     implementation 'com.github.jstarczewski:MathView:0.4.0'
     //compile 'io.github.kexanie.library:MathView:0.0.6'
+    implementation group: 'commons-io', name: 'commons-io', version: '2.6'
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
+    // For control over item selection of both touch and mouse driven selection
+    implementation "androidx.recyclerview:recyclerview-selection:1.1.0-rc03"
     implementation 'in.hourglass.mathrender:katexmathview:1.0'
 //    implementation 'io.github.sidvenu.mathjaxview:mathjaxview:1.0.7'
     implementation('com.razorpay:checkout:1.5.15')
-    implementation 'com.squareup.retrofit2:retrofit:2.2.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
 }

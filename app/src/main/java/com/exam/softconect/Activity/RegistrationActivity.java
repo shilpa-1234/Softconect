@@ -2,7 +2,6 @@ package com.exam.softconect.Activity;
 
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -20,7 +19,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -47,11 +45,14 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
     TextView txt_login;
     Button btn_register_now;
     String status, message, mobile_number, sponsor_id;
+
     TextInputLayout inputLayout, inputLayout_otp, inputLayout_password;
     public TextInputEditText inputEditText, inputEditText_otp, inputEditText_password;
     Button button, btn_otp_process, btn_otp_cancel, btn_password_cancel, btn_password_submit;
     AlertDialog alertDialog;
+
     LoginVolleyService mVolleyService;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -190,11 +191,9 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
 
                                             if (status.equalsIgnoreCase("1")) {
                                                 mobile_number = jsonObject.getString("mobile");
-//                                               Intent i= new Intent(RegistrationActivity.this,LoginActivity.class);
-//                                               startActivity(i);
-                                                open();
-                                            //Show OTP Dialog
-//                                                OTP_Dialog();
+
+                                                //Show OTP Dialog
+                                                OTP_Dialog();
 
 
                                             } else {
@@ -289,7 +288,7 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
                 if (str_otp.equals("")) {
                     inputLayout_otp.setError("Enter OTP");
                 } else {
-//                    OTPVerify();
+                    OTPVerify();
                 }
             }
         });
@@ -365,27 +364,5 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
         RequestQueue queue = Volley.newRequestQueue(this);
         queue.add(request);
 
-    }
-    public void open(){
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        alertDialogBuilder.setMessage("Register Sucessfully");
-                alertDialogBuilder.setPositiveButton("OK",
-                        new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface arg0, int arg1) {
-                                Intent i= new Intent(RegistrationActivity.this,LoginActivity.class);
-                                startActivity(i);
-                            }
-                        });
-
-//        alertDialogBuilder.setNegativeButton("No",new DialogInterface.OnClickListener() {
-//            Override
-//            public void onClick(DialogInterface dialog, int which) {
-//                finish();
-//            }
-//        });
-
-        AlertDialog alertDialog = alertDialogBuilder.create();
-        alertDialog.show();
     }
 }

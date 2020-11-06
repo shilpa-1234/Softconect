@@ -564,7 +564,7 @@ public class DeshBoardActivity extends AppCompatActivity implements NavigationVi
             case R.id.btn_test_view:
 
                 if (str_package_status.equalsIgnoreCase("1")) {
-                    intent = new Intent(this, ViewResultActivity.class);
+                    intent = new Intent(this,ViewResultActivity.class);
                     intent.putExtra("testId", str_testId_Test);
                     startActivity(intent);
                 } else {

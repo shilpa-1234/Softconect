@@ -11,8 +11,5 @@
 
 
     <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
-    <string name="download_pdf">Download Pdf</string>
-    <string name="pdf_url">PDF URL</string>
-    <string name="permission_request_message">Storage permission allows us to save pdf.</string>
 
 </resources>

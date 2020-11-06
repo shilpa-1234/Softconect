@@ -1,14 +1,12 @@
 package com.exam.softconect.Activity;
 
 import android.app.ProgressDialog;
-import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -102,13 +100,6 @@ public class AllViewResultActivity extends AppCompatActivity implements View.OnC
                                         TestPanelHelper testList_ = new TestPanelHelper();
 
                                         testList_.setTest_Id_result(jsonObject1.getString("test_id"));
-                                        String test_id=jsonObject1.getString("test_id");
-                                        SharedPreferences preferences=getSharedPreferences("Mypref",MODE_PRIVATE);
-                                        SharedPreferences.Editor editor = preferences.edit();
-                                        editor.putString("test_id",jsonObject1.getString("test_id"));
-                                        Log.d("@testid",test_id);
-                                        editor.commit();
-                                        editor.apply();
                                         testList_.setTest_name_result(jsonObject1.getString("test_name"));
                                         testList_.setTotal_score(jsonObject1.getString("total_score"));
                                         testList_.setTotal_test_marks(jsonObject1.getString("total_test_marks"));
